@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/resources/сss/style.css">
+    <title>Document</title>
+
+</head>
+<body>
+    <div class="container">
+        <header class="header">
+            <div class="header__wrapper">
+                <div class="header__logo">
+                    <div class="header__logo-image">
+                        <img src="/resources/images/logo.png" alt="logo">
+                    </div>
+                    <div class="header__logo-title">
+                        MY SITE
+                    </div>
+                    
+                </div>
+                <div class="header__login-panel">
+                    <div class="header__login" id="header-login">
+                        <button class="btn btn--login" id="button-login">Login</button>
+                        <button class="btn btn--register" id="button-register">Register</button>
+                    </div>
+                    <div class="header__authorize d-none" id="header-user">
+                        <div class="header__user" id="user-name">
+                            Hello, Sulja!
+                        </div>
+                        <div>
+                            <button class="btn btn--exit" id="button-exit">Exit</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </header>
+        <section class="mt--x d-none" id="forms-section">
+            <div class="wrapper form__wrapper">
+                <!-- LOGIN FORM -->
+                <form class="form d-none" id="form-login" onsubmit="return false;">
+                    <div class="form__header">
+                        <div class="form__title">
+                            Login
+                        </div>
+                    </div>
+                    <div class="form__body">
+                        <div class="form__control">
+                            <label for="autorize_input-login" class="form__label">Login</label>
+                            <input type="input" class="form__control-element" id="autorize_input-login" aria-describedby="autorize_login-help" required>
+                            <div id="autorize_login-help" class="form__text d-none">Минимум 6 символов (буквы латиница)</div>
+                        </div>
+                        <div class="form__control">
+                            <label for="autorize_input-password" class="form__label">Password</label>
+                            <input type="password" class="form__control-element" id="autorize_input-password" aria-describedby="autorize_password-help" required>
+                            <div id="autorize_password-help" class="form__text d-none">Минимум 6 символов, должен включать латинские буквы и цифры</div>
+                        </div>
+                    </div>
+                    <div class="mt--x form__footer">
+                        <button class="btn btn--login" id="autorize_button-login" disabled>Login</button>
+                    </div>
+
+                    <div class="mt--x form__error d-none" id="authorize_error">
+                    </div>
+                    
+                </form>
+                <!-- LOGIN FORM -->
+                <!-- REGISTER FORM -->
+                <form class="form d-none" id="form-register" onsubmit="return false;">
+                    <div class="form__header">
+                        <div class="form__title">
+                            Register
+                        </div>
+                    </div>
+                    <div class="form__body">
+                        <div class="form__control">
+                            <label for="register_input-login" class="form__label">Login</label>
+                            <input type="input" class="form__control-element" id="register_input-login" aria-describedby="register_login-help" required>
+                            <div id="register_login-help" class="form__text d-none">Минимум 6 символов (буквы латиница)</div>
+                        </div>
+                        <div class="form__control">
+                            <label for="register_input-password" class="form__label">Password</label>
+                            <input type="password" class="form__control-element" id="register_input-password" aria-describedby="register_password-help" required>
+                            <div id="register_password-help" class="form__text d-none">Минимум 6 символов, должен включать латинские буквы и цифры</div>
+                        </div>
+                        <div class="form__control">
+                            <label for="register_input-confirm_password" class="form__label">Confirm password</label>
+                            <input type="password" class="form__control-element" id="register_input-confirm_password" aria-describedby="register_confirm_password-help" required>
+                            <div id="register_confirm_password-help" class="form__text d-none">Пароли не совпадают</div>
+                        </div>
+                        <div class="form__control">
+                            <label for="register_input-email" class="form__label">Email</label>
+                            <input type="text" class="form__control-element" id="register_input-email" aria-describedby="register_email-help" required>
+                            <div id="register_email-help" class="form__text d-none">Email введен не правильно</div>
+                        </div>
+                        <div class="form__control">
+                            <label for="register_input-name" class="form__label">Name</label>
+                            <input type="text" class="form__control-element" id="register_input-name" aria-describedby="register_name-help" required>
+                            <div id="register_name-help" class="form__text d-none">Минимум 2 символа, только буквы. Не более 30 сиволов</div>
+                        </div>
+                    </div>
+                    <div class="mt--x form__footer">
+                        <button class="btn btn--register" id="register_button-register" disabled>Register</button>
+                    </div>
+                    <div class="mt--x form__error d-none" id="register_error">
+                    </div>
+                </form>
+                <!-- REGISTER FORM -->
+            </div>
+        </section>
+    </div>
+    <div>PAGE 2</div>
+    <script src="../scripts/server.js"></script>
+    <script src="../scripts/cookie.js"></script>
+    <script src="../scripts/index.js"></script>
+    <script src="../scripts/forms_validate.js"></script>
+</body>
+
+</html>

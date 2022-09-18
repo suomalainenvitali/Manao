@@ -1,0 +1,308 @@
+/*
+    Starting page settings
+*/
+* {
+    margin: 0;
+    padding: 0;
+    font-size: 16px;
+    font-family: 'Courier New', Courier, monospace;
+    box-sizing: border-box;
+}
+
+body {
+    min-height: 100vh;
+}
+
+
+
+
+@media (max-width: 575px) {
+    .container{
+        width: 100%;
+    }
+    .btn {
+        font-size: 0.8em;
+    }
+}
+@media (min-width: 576px) {
+    .container{
+        max-width: 540px;
+    }
+}
+@media (min-width: 768px) {
+    .container{
+        max-width: 720px;
+    }
+}
+@media (min-width: 992px) {
+    .container{
+        max-width: 960px;
+    }
+}
+@media (min-width: 1200px) {
+    .container{
+        max-width: 1140px;
+    }
+}
+@media (min-width: 1400px) {
+    .container{
+        max-width: 1320px;
+    }
+}
+
+
+
+
+
+
+/*
+    Page header
+*/
+.header {
+    padding: 5px;
+}
+.header__wrapper {
+    display: flex;
+    width: 100%;
+    padding: 5px 5px 0px 5px;
+    align-items: center;
+    border-bottom: 2px solid #000;
+    box-shadow: rgba(0, 0, 0, 0.16) 0px 3px 6px, rgba(0, 0, 0, 0.23) 0px 3px 6px;
+}
+.header__logo {
+    flex-grow: 1;
+    padding: 5px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+.header__logo-title {
+    margin-left: 10px;
+    font-weight: bold;
+    text-shadow: 0 2px 1px #858585;
+                
+    
+}
+.header__login-panel {
+    flex-grow: 1;
+    display: flex;
+    justify-content: flex-end;
+}
+.header__login {
+    display: flex;
+    align-items: center;
+}
+.header__login > button:not(:first-child) {
+    margin-left: 5px;
+}
+.header__authorize {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+.header__user{
+    padding: 5px;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: bold;
+}
+
+@media (max-width: 575px) {
+    .header__logo-image > img {
+        max-width: 40px;
+    }
+    .header__logo-title {
+        display: none;
+    }
+    .header__user {
+        font-size: 1.5em;
+    }
+}
+@media (min-width: 576px) {
+    .header__logo-image > img {
+        max-width: 40px;
+    }
+    .header__logo-title {
+        font-size: 2em;
+    }
+    .header__user {
+        font-size: 1.5em;
+    }
+}
+@media (min-width: 768px) {
+    .header__logo-image > img {
+        max-width: 50px;
+    }
+    .header__logo-title {
+        font-size: 2.5em;
+    }
+    .header__user {
+        font-size: 1.6em;
+    }
+}
+@media (min-width: 992px) {
+    .header__logo-image > img {
+        max-width: 60px;
+    }
+    .header__logo-title {
+        font-size: 3em;
+    }
+    .header__user {
+        font-size: 2em;
+    }
+}
+@media (min-width: 1200px) {
+
+}
+@media (min-width: 1400px) {
+
+}
+
+/*
+    Page login&registration modal
+*/
+#modal-login {
+    padding: 5px;
+}
+.form__wrapper{ 
+    margin: 0 auto;
+    border-radius: 20px;
+    box-shadow: rgba(0, 0, 0, 0.3) 0px 0px 6px, rgba(0, 0, 0, 0.3) 0px 0px 6px;
+}
+.form {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 5px 30px 5px 30px;
+}
+.form__header {
+    width: 100%;
+    padding-bottom: 5px;
+    border-bottom: 2px solid black;
+    text-align: center;
+}
+.form__title {
+    text-shadow: 0 2px 1px #858585;
+    font-size: 2em;
+    font-weight: bold;      
+}
+
+.form__body {
+    width: 100%;
+}
+.form__control {
+    display: flex;
+    flex-direction: column;
+}
+.form__label {
+    font-weight: bold;
+    font-size: 1.2em;
+    padding: 5px 0px 5px 0px;
+}
+.form__control-element {
+    font-size: 0.9em;
+    padding: 5px 5px;
+    border-radius: 3px;
+    border: 1px solid black;
+}
+.form__control-element:active, 
+.form__control-element:focus {
+    outline: none;
+    border: 2px solid black;
+    border-radius: 5px;
+    box-shadow: rgba(88, 88, 88, 0.25) 0px 0px 3px 4px;
+}
+.form__text {
+    font-size: 0.8em;
+    padding-top: 3px;
+    color: red;
+}
+
+.form__footer {
+    width: 100%;
+    padding-top: 10px;
+    border-top: 2px solid black;
+    text-align: center;
+}
+.form__error {
+    width: 100%;
+    padding: 3px;
+    background: #333333;
+    background: -webkit-linear-gradient(to right, #000000, #440303);
+    background: linear-gradient(to right, #000000, #440303);
+    border-radius: 10px;
+    font-weight: bold;
+    text-align: center;
+    color:white;
+    box-shadow: rgba(0, 0, 0, 0.25) 0px 0px 3px 4px;
+}
+.form__error:hover{
+    background: -webkit-linear-gradient(to left, #000000, #440303);
+    background: linear-gradient(to left, #000000, #440303);
+}
+@media (max-width: 575px) {
+    .form__wrapper {
+        width: 400px;
+    }
+}
+@media (max-width: 410px) {
+    .form__wrapper {
+        width: 100%;
+    }
+}
+@media (min-width: 576px) {
+    .form__wrapper {
+        width: 400px;
+    }
+}
+
+
+/*
+    Independent components
+*/
+/*
+    Buttons
+*/
+.btn {
+    padding: 5px 10px 5px 10px;
+    border-radius: 5px;
+    border: 2px solid #000;
+}
+.btn:hover {
+    color: #fff;
+    box-shadow: rgba(0, 0, 0, 0.5) 0px 0px 10px inset, rgba(0, 0, 0, 0.5) 0px 0px 10px;
+}
+.btn--login:hover {
+    background: rgb(0, 97, 32);
+}
+.btn--register:hover {
+    background: rgb(0, 60, 255);
+}
+.btn--exit:hover {
+    background: rgb(230, 0, 0);
+}
+/*
+    Divs
+*/
+.container {  
+    margin: 0 auto;
+    width: 100%;
+}
+.wrapper {
+    padding: 10px;
+}
+/*
+    Margins mt - margin top;
+*/
+.mt--x { 
+    margin-top: 10px;
+}
+.mt--xx {
+    margin-top: 20px;
+}
+/*
+    Display
+*/
+.d-none {
+    display: none;
+}
